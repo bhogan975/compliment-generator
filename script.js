@@ -1,110 +1,89 @@
 // Compliment Generator logic (vanilla JS)
 
-// Array of 100 unique compliments (a mix of warm and playful/funny)
+// Array of 100 tasteful, mature compliments (suggestive/romantic but non-explicit)
 const compliments = [
-  "You bring out the best in people around you.",
-  "Your creativity makes the world a little brighter.",
-  "You're a wonderful example of kindness and strength.",
-  "You have a brilliant mind and a warm heart.",
-  "Your positivity is contagious — keep shining.",
-  "You're making a meaningful difference, even if you can't see it yet.",
-  "You have an amazing ability to make others feel valued.",
-  "Your curiosity and courage are truly inspiring.",
-  "You handle challenges with grace and resilience.",
-  "You're exactly the person someone needs today.",
-  "Your sense of humor could single-handedly solve Monday mornings.",
-  "You make complicated things look effortless.",
-  "Confidence looks great on you — wear it often.",
-  "You're braver than you believe and smarter than you think.",
-  "Your ideas have a way of sticking with people in the best way.",
-  "You have the kind of energy that makes rooms better.",
-  "You're a delightful mix of thoughtful and mischievous.",
-  "Your kindness is a gift to everyone who knows you.",
-  "You have a knack for turning problems into opportunities.",
-  "Your optimism is quietly revolutionary.",
-  "You are the kind of friend people search for and then thank their lucky stars for.",
-  "You have impeccable taste — even your playlist choices are charming.",
-  "Your laugh should be bottled and sold as happiness.",
-  "You bring patience and clarity when people need it most.",
-  "Your persistence is quietly changing your world.",
-  "You do small things with huge love.",
-  "Your perspective always brings calm and clarity.",
-  "You somehow make the ordinary feel magical.",
-  "You are a walking invitation to optimism.",
-  "That idea you had? Brilliant — and slightly dangerous (in a good way).",
-  "You make people feel seen and that’s a rare superpower.",
-  "Your curiosity leads you to beautiful places.",
-  "You are both clever and kind — a rare combo.",
-  "You smell like success (metaphorically, but still).",
-  "Your presence feels like a warm cup of tea on a rough day.",
-  "You give people courage just by believing in them.",
-  "You'd be a joy to have on any trivia team.",
-  "Your ideas have sparkle and depth — impressive.",
-  "You handle awkward situations like an elegant ninja.",
-  "You're that rare person who actually listens — priceless.",
-  "Even your mistakes are graceful and educational.",
-  "You have a personality that could lead a parade.",
-  "You're the kind of person who remembers birthdays and important details.",
-  "Your enthusiasm is delightfully stubborn — in the best way.",
-  "You have the patience of a saint and the wit of a poet.",
-  "You make people feel safer just by being nearby.",
-  "You are quietly remarkable and loudly kind.",
-  "You give the best advice without preaching.",
-  "You're more fun than a surprise snow day.",
-  "Your resilience reads like a beautifully written comeback story.",
-  "You can turn a brainstorm into a gentle storm of ideas.",
-  "You are a magnet for good things and good people.",
-  "Your focus is impressive — you make things happen.",
-  "You are a tiny hurricane of talent and charm.",
-  "People naturally relax around you — that's a gift.",
-  "You have a brilliant mind and a surprisingly soft heart.",
-  "You're the kind of person who remembers the little things.",
-  "You have a laugh that could power a city (if we built the right turbines).",
-  "You bring skill and warmth to every project you touch.",
-  "Your honesty is refreshing and rare.",
-  "You are an excellent listener with enviable empathy.",
-  "You bring a tidy kind of chaos that leads to great outcomes.",
-  "You are wise beyond your years in all the best ways.",
-  "You'd make a great narrator for your own life's audiobook.",
-  "Your creativity is the kind that makes people stop and smile.",
-  "You give people permission to be themselves.",
-  "You'd win an award for subtle brilliance if such awards existed.",
-  "Your optimism is practical and effective — rare and useful.",
-  "You make complex problems feel solvable and fun.",
-  "You have the patience to teach and the charisma to inspire.",
-  "You're equal parts courage and charm.",
-  "Your jokes land with style — keep them coming.",
-  "You are the human version of a good surprise.",
-  "You're so thoughtful the universe owes you a thank-you note.",
-  "You're the kind of person who brightens group chats.",
-  "You handle curveballs with a kind grin and clever answer.",
-  "You radiate competence and approachability.",
-  "Your taste in snacks should be studied by scientists.",
-  "You'd be an excellent co-conspirator for weekend adventures.",
-  "You make generosity look effortless.",
-  "You have a calm confidence that makes others braver.",
-  "Your curiosity is the map to your next great thing.",
-  "You have an uncanny ability to find the silver lining.",
-  "You're a delightful combination of curious and capable.",
-  "You make hard work look like a satisfying hobby.",
-  "You are the reason someone smiled today.",
-  "You exhibit heroic levels of patience and practical humor.",
-  "Your cleverness is a gift that keeps on giving.",
-  "You're as reliable as sunrise — and just as lovely.",
-  "You turn ordinary moments into memorable ones.",
-  "You're wonderfully unpredictable in the best ways.",
-  "You are more inspiring than a perfectly brewed cup of coffee.",
-  "You have a heart that builds and a mind that designs.",
-  "You're a terrific human highlight reel.",
-  "Your ideas frequently deserve standing ovations.",
-  "You carry warmth and wit like a cozy scarf.",
-  "You make complicated things feel like a shared adventure.",
-  "Your optimism has a practical blueprint attached.",
-  "You're a blend of curiosity, courage, and excellent taste.",
-  "You somehow make deadlines feel like small victories.",
-  "You are a welcome sight and a better company.",
-  "You have a superhero talent for spotting the best in people.",
-  "Your presence improves the average day by measurable percent."
+  "You have a presence that quietly rearranges the room for the better.",
+  "There’s something disarmingly captivating about your smile.",
+  "You make confidence look effortless and very attractive.",
+  "Your conversation is the kind I’d happily get lost in.",
+  "You wear intelligence like a favorite coat—stylish and always right.",
+  "That look you give when you’re thinking could start a novel.",
+  "You have a way of making a simple hello feel like poetry.",
+  "Your wit is deliciously sharp—dangerously charming.",
+  "You move through the world with quiet magnetism.",
+  "There’s an elegance to your mischief that I admire.",
+  "You make late nights seem like the best idea.",
+  "You have a way of making a simple hello feel like poetry.",
+  "You’re the tasteful kind of risky that’s impossible to ignore.",
+  "The ease with which you laugh is intoxicating.",
+  "You carry warmth with a hint of danger—very compelling.",
+  "Your style whispers confidence and says all the right things.",
+  "You’re an excellent reason to stay out a little later.",
+  "There’s a timelessness to your charm—classic and unforgettable.",
+  "Your eyes tell stories I want to read slowly.",
+  "You have a subtle bravado that’s oddly comforting.",
+  "You make the everyday feel like an indulgence.",
+  "You balance sweetness with spice in perfect measure.",
+  "Your curiosity is alluring; it pulls people toward you.",
+  "You smell like confidence and a great playlist.",
+  "You have the kind of laugh that should be trademarked.",
+  "There’s a generous, lived-in kindness about you that’s magnetic.",
+  "You give compliments that feel like little perfumed notes.",
+  "You flirt with life in a way that’s both bold and graceful.",
+  "Your hands look like they build thoughtful things.",
+  "You’re sophisticated without ever trying too hard.",
+  "Your attention to detail is quietly seductive.",
+  "You look like someone who keeps good secrets.",
+  "You’re the sort of person who improves other people’s stories.",
+  "Your smile could be the plot twist in a romantic scene.",
+  "There’s an unbeatable chemistry to how you approach the world.",
+  "You carry stories in your silence—and they’re intriguing.",
+  "You have a subtle confidence that hums like good coffee.",
+  "You make grown-up conversations feel playful again.",
+  "Your presence lingers like the best kind of perfume.",
+  "You have a way of making complexity feel inviting.",
+  "People lean in when you speak—and for good reason.",
+  "You are quietly audacious, and it suits you.",
+  "Your elegance is easy and delightfully persuasive.",
+  "You look like someone who appreciates fine things—and good company.",
+  "There’s a cleverness to your charm that never goes out of style.",
+  "You make intimate moments feel like a well-composed song.",
+  "Your taste is impeccable and utterly contagious.",
+  "There’s a slow confidence about you that feels like a rare vintage.",
+  "You make subtlety feel like an art form.",
+  "There’s an adventurous glint in your eye that’s impossible not to notice.",
+  "You carry laughter like it’s a favorite accessory.",
+  "You have a knack for turning quiet gestures into meaningful ones.",
+  "Your presence is a perfectly timed plot device.",
+  "You have the sort of charisma that upgrades everything it touches.",
+  "You blend warmth and daring and call it a Tuesday.",
+  "You look particularly good in plans that begin at sunset.",
+  "Your charm arrives fully formed and utterly disarming.",
+  "You’re a pleasant bit of mischief wrapped in thoughtfulness.",
+  "You make small talk feel dangerously interesting.",
+  "You ought to come with a soundtrack—sultry and tasteful.",
+  "Your confidence feels like an invitation to better things.",
+  "You have a way of making secrets feel safe.",
+  "That effortless charisma of yours should be studied by poets.",
+  "You look like someone who knows where the fun begins.",
+  "You have a calming intensity that’s very attractive.",
+  "You are a fine mix of humor, warmth, and a little hush.",
+  "There’s a richness to your laugh that suggests interesting stories.",
+  "You make routines feel like slow, enjoyable rituals.",
+  "You contain the kind of confident stillness that draws people in.",
+  "You are as intriguing as the best kind of mystery novel.",
+  "You make even the mundane feel like part of a larger, pleasurable plan.",
+  "You have a presence that’s both comforting and exhilarating.",
+  "There’s a polished edge to your kindness.",
+  "Your company feels like a well-made late-night conversation.",
+  "You carry warmth that both soothes and sparks curiosity.",
+  "The way you listen is an unexpectedly intimate gift.",
+  "You are effortlessly memorable in all the right ways.",
+  "You make the idea of staying up late seem entirely reasonable.",
+  "Your confidence is a gentle dare — and it’s thrilling.",
+  "You have a taste for the thoughtful, the bold, and the beautifully simple.",
+  "You are a quietly spectacular presence.",
+  "You leave a lovely trail of good ideas and better moods wherever you go."
 ];
 
 // Grab DOM elements
@@ -117,6 +96,58 @@ let lastIndex = -1;
 
 // Small set of emoji used for badge and particles
 const emojiList = ['✨','🌟','😊','🔥','🌈','🎉','💫','😄','💖','🤩','🍀','🌻'];
+
+// Safe, clean jokes array (50 items). Each item is either a single 'line' or an object {setup, punchline}.
+const jokes = [
+  { setup: "Why did the scarecrow win an award?", punchline: "Because he was outstanding in his field." },
+  { setup: "Why don't scientists trust atoms?", punchline: "Because they make up everything." },
+  { setup: "I told my computer I needed a break.", punchline: "It said: 'No problem — I'll go to sleep.'" },
+  { setup: "Why do bees have sticky hair?", punchline: "Because they use a honeycomb." },
+  { setup: "What do you call fake spaghetti?", punchline: "An impasta." },
+  { setup: "Why did the math book look sad?", punchline: "It had too many problems." },
+  { setup: "What do you call a factory that makes okay products?", punchline: "A satisfactory." },
+  { setup: "Why was the robot so bad at soccer?", punchline: "It kept kicking up sparks." },
+  { setup: "I would tell you a construction joke...", punchline: "But I'm still working on it." },
+  { setup: "Why did the coffee file a police report?", punchline: "It got mugged." },
+  { setup: "What do you call a belt made of watches?", punchline: "A waist of time." },
+  { setup: "Why don't eggs tell jokes?", punchline: "They'd crack each other up." },
+  { setup: "What do you call cheese that's not yours?", punchline: "Nacho cheese." },
+  { setup: "I asked the librarian if the library had books on paranoia.", punchline: "She whispered: 'They're right behind you.'" },
+  { setup: "Why did the tomato turn red?", punchline: "Because it saw the salad dressing." },
+  { setup: "How do you organize a space party?", punchline: "You planet." },
+  { setup: "Why did the cookie go to the hospital?", punchline: "Because it felt crummy." },
+  { setup: "Why was the broom late?", punchline: "It swept in." },
+  { setup: "What did one wall say to the other?", punchline: "I'll meet you at the corner." },
+  { setup: "Why don't some couples go to the gym?", punchline: "Because some relationships don't work out." },
+  { setup: "Why was the stadium so cool?", punchline: "It was filled with fans." },
+  { setup: "What do you call an alligator in a vest?", punchline: "An investigator." },
+  { setup: "Why did the bicycle fall over?", punchline: "It was two-tired." },
+  { setup: "What do you call a cow with no legs?", punchline: "Ground beef." },
+  { setup: "I told a joke about a roof once.", punchline: "It went over everyone's head." },
+  { setup: "Why did the golfer bring two pairs of pants?", punchline: "In case he got a hole in one." },
+  { setup: "Why was the math teacher late to work?", punchline: "She took the rhombus." },
+  { setup: "What do you call a snowman in summer?", punchline: "A puddle." },
+  { setup: "Why did the picture go to jail?", punchline: "It was framed." },
+  { setup: "How does a penguin build its house?", punchline: "Igloos it together." },
+  { setup: "What do you call a lazy kangaroo?", punchline: "A pouch potato." },
+  { setup: "Why did the smartphone go to school?", punchline: "It wanted to be smarter." },
+  { setup: "What do you call a dinosaur with an extensive vocabulary?", punchline: "A thesaurus." },
+  { setup: "Why did the chicken join a band?", punchline: "Because it had the drumsticks." },
+  { setup: "Why was the calendar popular?", punchline: "It had a lot of dates." },
+  { setup: "Why can't your nose be 12 inches long?", punchline: "Because then it'd be a foot." },
+  { setup: "Why did the banana go to the doctor?", punchline: "It wasn't peeling well." },
+  { setup: "How does the ocean say hello?", punchline: "It waves." },
+  { setup: "Why did the computer show up at work late?", punchline: "It had a hard drive." },
+  { setup: "Why did the grape stop in the middle of the road?", punchline: "It ran out of juice." },
+  { setup: "What did the janitor say when he jumped out of the closet?", punchline: "Supplies!" },
+  { setup: "What do you call a pile of cats?", punchline: "A meowntain." },
+  { setup: "Why don't skeletons fight each other?", punchline: "They don't have the guts." },
+  { setup: "What did zero say to eight?", punchline: "Nice belt!" },
+  { setup: "Why did the scarecrow become a successful musician?", punchline: "Because he had perfect straw-timing." },
+  { setup: "Why do seagulls fly over the sea?", punchline: "Because if they flew over the bay they'd be bagels." },
+  { setup: "What do you call an elephant that doesn't matter?", punchline: "An irrelephant." },
+  { setup: "Why did the tomato sit down at the computer?", punchline: "To ketchup on emails." }
+];
 
 /**
  * Spawn a burst of emoji particles near the button's position.
@@ -143,6 +174,43 @@ function spawnParticles(count = 10) {
     // remove after animation
     span.addEventListener('animationend', () => span.remove());
   }
+}
+
+/**
+ * Display a joke: show setup immediately, animate punchline after delay.
+ */
+function setNewJoke() {
+  if (!document.getElementById('joke-setup')) return;
+  const idx = Math.floor(Math.random() * jokes.length);
+  const j = jokes[idx];
+
+  const setupEl = document.getElementById('joke-setup');
+  const punchEl = document.getElementById('joke-punchline');
+
+  // Clear prior
+  setupEl.textContent = '';
+  punchEl.textContent = '';
+  punchEl.classList.remove('revealed');
+
+  // If it's a single-line joke (string), show immediately
+  if (typeof j === 'string') {
+    setupEl.textContent = j;
+    // reveal a playful punchy emoji
+    spawnParticles(6);
+    return;
+  }
+
+  // Show setup
+  setupEl.textContent = j.setup || '';
+
+  // After a short delay, reveal punchline with animation
+  setTimeout(() => {
+    punchEl.textContent = j.punchline || '';
+    // trigger CSS reveal
+    requestAnimationFrame(() => punchEl.classList.add('revealed'));
+    // fun particles for punchline
+    spawnParticles(10);
+  }, 1600);
 }
 
 /**
@@ -200,6 +268,10 @@ function init() {
 
   // Button click
   btn.addEventListener('click', setNewCompliment);
+
+  // Joke button
+  const jokeBtn = document.getElementById('joke-btn');
+  if (jokeBtn) jokeBtn.addEventListener('click', setNewJoke);
 
   // Allow keyboard activation on Enter/Space (button already handles it, but keep for clarity)
   btn.addEventListener('keyup', (e) => {

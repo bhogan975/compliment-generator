@@ -8,6 +8,10 @@
   <!-- Google Fonts: Nunito for compliments, Lato for UI -->
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Nunito:wght@600;800&display=swap" rel="stylesheet">
 
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="favicon.svg">
+
   <!-- Main stylesheet -->
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -42,10 +46,12 @@
       <!-- Compliment display area (readonly textarea for accessibility and copyable text) -->
       <textarea id="compliment" class="compliment" rows="4" readonly aria-live="polite" aria-label="Compliment display"></textarea>
 
-      <!-- Button to get a new compliment -->
-      <button id="new-btn" class="btn" type="button" aria-label="Get a new compliment">Get a New Compliment</button>
+      <p class="hint">A warm word for your day — use the buttons below.</p>
 
-      <p class="hint">A warm word for your day — click to refresh.</p>
+      <!-- card corner suits to resemble a playing card -->
+      <div class="card-suit top-left">♥</div>
+      <div class="card-suit bottom-right">♠</div>
+
       <!-- decorative micro-shapes for visual intrigue -->
       <div class="decor" aria-hidden="true">
         <span></span>
@@ -53,6 +59,18 @@
         <span></span>
       </div>
     </section>
+
+    <!-- Controls moved outside the card (as requested) -->
+    <div class="controls">
+      <button id="new-btn" class="btn primary" type="button" aria-label="Get a new compliment">Get a New Compliment</button>
+      <button id="joke-btn" class="btn secondary" type="button" aria-label="Tell me a joke">Tell Me a Joke</button>
+    </div>
+
+    <!-- Joke display area (outside the card) -->
+    <div id="joke-display" class="joke-display" aria-live="polite">
+      <div id="joke-setup" class="joke-setup"></div>
+      <div id="joke-punchline" class="joke-punchline"></div>
+    </div>
   </main>
 
   <!-- JavaScript -->
